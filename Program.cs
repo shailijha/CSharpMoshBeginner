@@ -14,12 +14,27 @@ namespace HelloWorld
             int i = 1000;
             byte b = (byte) i;
             Console.WriteLine(b);
+    
+            //int a = Convert.ToInt32(number);
 
-            string number = "1224";
-            int a = Convert.ToInt32(number);
-            byte b1 = Convert.ToByte(number);
-            Console.WriteLine(a);
-            Console.WriteLine(b1);
+            try
+            {
+                /*string number = "1224";
+                byte b1 = Convert.ToByte(number);
+                Console.WriteLine(b1);*/
+                string str = "true";
+                bool b1 = Convert.ToBoolean(str);
+                Console.WriteLine(b1);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("The number could not be converted to a byte");
+
+                //throw;
+            }
+
+            //Console.WriteLine(a);
+            
         }
     }
 }
