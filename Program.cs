@@ -49,6 +49,26 @@ namespace HelloWorld
             Console.WriteLine(now.ToLongTimeString());
             Console.WriteLine(now.ToShortTimeString());
             Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm"));
+
+            //Creating TimeSpan objects
+            var timeSpan = new TimeSpan(1, 2, 3);
+            var ts1 = new TimeSpan(1, 0, 0);
+            var ts2 = TimeSpan.FromHours(1);
+
+            var start = DateTime.Now;
+            var end = DateTime.Now.AddMinutes(2);
+
+            Console.WriteLine(end-start);
+
+            //Properties
+            Console.WriteLine("Minutes: "+timeSpan.Minutes);
+            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+
+            //Modify
+            Console.WriteLine("Add: " + timeSpan.Add(TimeSpan.FromMinutes(9)));
+            Console.WriteLine("Add: " + timeSpan.Subtract(TimeSpan.FromMinutes(3)));
+
+            Console.WriteLine(TimeSpan.Parse("12:09:34"));
         }
     }
 }
